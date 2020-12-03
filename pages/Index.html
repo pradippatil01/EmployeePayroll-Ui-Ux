@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="row-content">
-                <label class="label text" for="gender" value="male"> </label>
+                <label class="label text" for="gender" value="male">Gender</label>
                 <div>
                     <input type="radio" id="male" name="gender" value="male">
                     <label class="text" for="male">Male</label>
@@ -122,29 +122,40 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-                    <select id="month" name= "Month">
-                    <option value="Jan">January</option> 
-                    <option value="Feb">Febuary</option>     
-                    <option value="March">March</option>     
-                    <option value="April">April</option> 
-                    <option value="May">May</option>
-                    <option value="June">June</option> 
-                    <option value="July">July</option>
-                    <option value="Aug">August</option>
-                    <option value="Sept">September</option> 
-                    <option value="Oct">October</option> 
-                    <option value="Nov">November</option> 
-                    <option value="Dec">December</option>
-                  </select>
-                  <select id="year" name="Year">
-                    <option value="2020">2020</option> 
-                    <option value="2019">2019</option> 
-                    <option value="2018">2018</option> 
-                    <option value="2017">2017</option> 
-                    <option value="2016">2016</option>
-                  </select>
-                </div>  
+                    <select id="month" name="Month">
+                        <option value="Jan">January</option>
+                        <option value="Feb">Febuary</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="Aug">August</option>
+                        <option value="Sept">September</option>
+                        <option value="Oct">October</option>
+                        <option value="Nov">November</option>
+                        <option value="Dec">December</option>
+                    </select>
+                    <select id="year" name="Year">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                    </select>
                 </div>
+            </div>
+            <div class="row content">
+                <label class="label text" for="notes">Notes</label>
+                <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px;"></textarea>
+            </div>
+            <div class="buttonParent">
+                <a href="../pages/Index.html" class="resetButton button cancelButton">Cancel</a>
+                <div class="submit-reset">
+                    <button type="submit" class="button submitButton" id="submitButton">Submit</button>
+                    <button type="reset" class="resetButton button">Reset</button>
+                </div>
+            </div>
         </form>
     </div>
 </body>
