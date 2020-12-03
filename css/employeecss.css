@@ -18,7 +18,7 @@ body{
     flex-direction: row;
     align-items: center;
     border: 0px solid green;
-    width:  80%;
+    width: 80%;
 }
 .logo-content-img{
     border: solid 0px #42515f;
@@ -27,6 +27,7 @@ body{
 .emp-text{
     font: normal normal bold 20px/25px Montseraat;
     font-family: "Montseraat", sans-serif;
+    letter-spacing: 0px;
     color: #82a70c;
     text-transform: capitalize;
 }
@@ -48,18 +49,20 @@ box-sizing: border-box;
     border: 0px solid green;
 }
 
+
+
 .form{
-    width: 65%;
+    width: 60%;
     padding: 44px 60px;
-    background: white 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
-    border: 1px solid #f5f5f5;
+    border: 1px solid #F5F5F5;
     border-radius: 8px;
     opacity: 1;
 }
 
 .form-head{
-    font:  normal normal normal bold 24px/37px Robooto;
+    font:  normal normal normal bold 24px/37px Roboto;
     letter-spacing: 0px;
     color: #42515f;
     text-transform: capitalize;
@@ -92,8 +95,8 @@ label{
 }
 
 .input{
-    width: 500px;
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius:  4px;
     resize: vertical;
@@ -104,7 +107,7 @@ label{
     flex-direction: row;
 }
 
-.profile-radio-content> label{
+.profile-radio-content > label{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -117,11 +120,11 @@ label{
 
 select {
     padding: 12px;
-    border: 1px solid D#ccc;
+    border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
     font: normal normal normal 16px Roboto;
-    letter-spacing: Opx;
+    letter-spacing: 0px;
     color: ■#42515f;
     background-color: transparent;
   }

@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widhth=device-width, initial-scale1.0">
+    <meta name="viewport" content="widhth=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/employeecss.css">
     <title>Employee payroll form</title>
 </head>
@@ -25,7 +26,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="Your name.." required>
+                <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
             </div>
             <div class="row-content">
                 <label class="label text" for="profile">Profile image</label>
@@ -80,12 +81,10 @@
                 </div>
             </div>
             <div class="row—content">
-                <label class="label text" for="salary">Choose your salary: </label>
-                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100"
-                    value="400000">
-                <output class="salary—output text" for="salary">400000</output>
+                <label class="label text" for="salary">choose a salary :</label>
+                <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+                <output class="salary-output" for="salary">400000</output>
             </div>
-
             <div class="row-content">
                 <label class="label text" for="startDate">StartDate</label>
                 <div>
@@ -158,6 +157,13 @@
             </div>
         </form>
     </div>
+    <script>
+        const salary = document.querySelector('#salary');
+        const output = document.querySelector('.salary-output');
+        output.textContent = salary.value;
+        salary.addEventListener('input', function () {
+            output.textContent = salary.value;
+        });
+    </script>
 </body>
-
 </html>
