@@ -73,8 +73,7 @@ box-sizing: border-box;
 
 .row-content{
     display: flex;
-    
-        margin-bottom: 10px;
+    margin-bottom: 10px;
     align-items: center;
     border: 0px solid green;
 }
@@ -129,33 +128,18 @@ select {
     color: ■#42515f;
     background-color: transparent;
   }
-
-  .buttonParent{
-      display: flex;
-      margin-bottom: 10px;
-      justify-content: space-between;
-      margin-top: 20px;
-  }
-  .button{
-      font-size: 20px;
-      font-family: Roboto;
-      letter-spacing: 0px;
-      color: #42515f;
-      opacity: 1;
-      background: transparent;
-      border: none;
-      font-weight: 400;
-      min-width: 140px;
-      padding: 7px 7px;
-      border: 1px solid #707070;
-      cursor: pointer;
-  }
+.right-btn
+{
+    width: 50%;
+    float: right;
+}
   .submitButton, .resetButton{
+    margin-right: 10px;
+    align-content: flex-start;
+    font-size: 20px;
+    font-family: Roboto;
+    letter-spacing: 0px;
       background-color: #f5f5f5;
-      margin-right: 30px;
-      font-size: 20px;
-      font-family: Roboto;
-      letter-spacing: 0px;
       color: #42515f;
       opacity: 1;
       border: none;
@@ -166,6 +150,19 @@ select {
       cursor: pointer;
 }
   .cancelButton{
+    background-color: #f5f5f5;
+    margin-right: 30px;
+    font-size: 20px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    opacity: 1;
+    border: none;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    border: 1px solid #707070;
+    cursor: pointer;
       text-decoration: none;
       text-align: center;
   }

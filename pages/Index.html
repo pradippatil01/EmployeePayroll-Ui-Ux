@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="widhth=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="../css/employeecss.css">
     <title>Employee payroll form</title>
 </head>
+
 <body>
+    <!-- code for logo -->
     <header class="header-content header">
         <div class="logo-content">
             <img src="../images/logo.png" alt="">
@@ -19,13 +22,16 @@
     </header>
     <div class="form-content">
         <form class="form">
+            <!-- code for heading -->
             <div class="form-head">
                 Employee Payroll form
             </div>
+            <!-- code for name label -->
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
             </div>
+            <!-- code for profile pic radio -->
             <div class="row-content">
                 <label class="label text" for="profile">Profile image</label>
                 <div class="profile-radio-content">
@@ -54,6 +60,7 @@
                     </label>
                 </div>
             </div>
+            <!-- code for  gender radio button-->
             <div class="row-content">
                 <label class="label text" for="gender" value="male">Gender</label>
                 <div>
@@ -63,6 +70,7 @@
                     <label class="text" for="female">Female</label>
                 </div>
             </div>
+            <!--code for checkbox-->
             <div class="row-content">
                 <label class="label text" for="department">Department</label>
                 <div>
@@ -78,13 +86,13 @@
                     <label class="text" for="others">Others</label>
                 </div>
             </div>
+            <!--code for salary-->
             <div class="row—content">
                 <label class="label text" for="salary">Salary</label>
-              
                 <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
                 <output class="salary-output" for="salary">400000</output>
-           
             </div>
+            <!--cdoe for date-->
             <div class="row-content">
                 <label class="label text" for="startDate">StartDate</label>
                 <div>
@@ -144,21 +152,24 @@
                     </select>
                 </div>
             </div>
+            <!--code for notes-->
             <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
                 <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px;"></textarea>
             </div>
-            <div class="buttonParent">
-                <a href="../pages/Index.html" class="resetButton button cancelButton">Cancel</a>
-                <div class="submit-reset">
-                    <button type="submit" class="button submitButton" id="submitButton" onclick="Save()">Submit</button>
-                    <button type="reset" class=" button resetButton" id="resetButton">Reset</button>
-                </div>
+            <!--code for buttons-->
+            <div class="row">
+                <input type="button" name="button" class="cancelButton" id="cancelButton" value="cancel"
+                    onClick="cancel()">
+                    <div class="right-btn">
+                <input type="button" name="button" class="submitButton" id="submitButton" value="submit"
+                    onClick="saveFile()">
+                <input type="button" name="button" class="resetButton" id="resetButton" value="reset"
+                    onClick="reset()"></div>
             </div>
         </form>
     </div>
-    <script type="text/javascript" src="../js/employee.jss">
-    </script>
 </body>
-
+<script type="text/javascript" src="../js/employee.jss">
+</script>
 </html>
