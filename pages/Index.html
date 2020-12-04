@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="widhth=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="../css/employeecss.css">
     <title>Employee payroll form</title>
 </head>
-
 <body>
     <header class="header-content header">
         <div class="logo-content">
@@ -20,7 +18,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save();return false">
+        <form class="form">
             <div class="form-head">
                 Employee Payroll form
             </div>
@@ -59,9 +57,9 @@
             <div class="row-content">
                 <label class="label text" for="gender" value="male">Gender</label>
                 <div>
-                    <input type="radio" id="male" name="gender" value="male">
+                    <input type="radio" id="male" name="gender" value="Male">
                     <label class="text" for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
+                    <input type="radio" id="female" name="gender" value="Female">
                     <label class="text" for="female">Female</label>
                 </div>
             </div>
@@ -81,9 +79,11 @@
                 </div>
             </div>
             <div class="row—content">
-                <label class="label text" for="salary">choose a salary :</label>
+                <label class="label text" for="salary">Salary</label>
+              
                 <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
                 <output class="salary-output" for="salary">400000</output>
+           
             </div>
             <div class="row-content">
                 <label class="label text" for="startDate">StartDate</label>
@@ -144,26 +144,21 @@
                     </select>
                 </div>
             </div>
-            <div class="row content">
+            <div class="row-content">
                 <label class="label text" for="notes">Notes</label>
                 <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px;"></textarea>
             </div>
             <div class="buttonParent">
                 <a href="../pages/Index.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
-                    <button type="submit" class="button submitButton" id="submitButton">Submit</button>
-                    <button type="reset" class="resetButton button">Reset</button>
+                    <button type="submit" class="button submitButton" id="submitButton" onclick="Save()">Submit</button>
+                    <button type="reset" class=" button resetButton" id="resetButton">Reset</button>
                 </div>
             </div>
         </form>
     </div>
-    <script>
-        const salary = document.querySelector('#salary');
-        const output = document.querySelector('.salary-output');
-        output.textContent = salary.value;
-        salary.addEventListener('input', function () {
-            output.textContent = salary.value;
-        });
+    <script type="text/javascript" src="../js/employee.jss">
     </script>
 </body>
+
 </html>
