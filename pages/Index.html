@@ -26,6 +26,7 @@
             <div class="form-head">
                 Employee Payroll form
             </div>
+            
             <!-- code for name label -->
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
@@ -89,8 +90,12 @@
             <!--code for salary-->
             <div class="row—content">
                 <label class="label text" for="salary">Salary</label>
-                <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
-                <output class="salary-output" for="salary">400000</output>
+                <select class="select-sal" type ="select" name="salary" id="salary" placeholder="Select Salary">
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="30000">30000</option>
+                    <option value="40000">40000</option>
+                </select>
             </div>
             <!--cdoe for date-->
             <div class="row-content">
