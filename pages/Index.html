@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/employeecss.css">
     <title>Employee payroll form</title>
 </head>
-
 <body>
     <!-- code for logo -->
     <header class="header-content header">
@@ -21,7 +20,7 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form">
+            <form class="form" action="#" onsubmit="submit();return false">
             <!-- code for heading -->
             <div class="form-head">
                 Employee Payroll form
@@ -30,8 +29,13 @@
             <!-- code for name label -->
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
+                <input class="input" type="text" id="name" name="name" onchange="validate()" placeholder="Your name..." required>
             </div>
+            <span>
+                <error-output class="text-error" for="name"></error-output>
+            </span>
+          
+           
             <!-- code for profile pic radio -->
             <div class="row-content">
                 <label class="label text" for="profile">Profile image</label>
@@ -164,17 +168,17 @@
             </div>
             <!--code for buttons-->
             <div class="row">
-                <input type="button" name="button" class="cancelButton" id="cancelButton" value="cancel"
+                <input type="submit" name="button" class="cancelButton" id="cancelButton" value="cancel"
                     onClick="cancel()">
                     <div class="right-btn">
-                <input type="button" name="button" class="submitButton" id="submitButton" value="submit"
-                    onClick="saveFile()">
-                <input type="button" name="button" class="resetButton" id="resetButton" value="reset"
+                <input type="submit" name="button" class="submitButton" id="submitButton" value="submit"
+                    onClick="submit()">
+                <input type="submit" name="button" class="resetButton" id="resetButton" value="reset"
                     onClick="reset()"></div>
             </div>
         </form>
     </div>
+    <script type="text/javascript" src="../js/employee.js">
+    </script>
 </body>
-<script type="text/javascript" src="../js/employee.jss">
-</script>
 </html>

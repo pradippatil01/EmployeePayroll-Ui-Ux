@@ -95,6 +95,13 @@ label{
     font-family: Roboto;
 }
 
+.text-error{
+   display: flex;
+   
+    font: normal normal normal 16px Roboto;
+    margin-left: 20%;
+}
+
 .input{
     width: 80%;
     padding: 12px;
