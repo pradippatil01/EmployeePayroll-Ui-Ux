@@ -97,7 +97,6 @@ label{
 
 .text-error{
    display: flex;
-   
     font: normal normal normal 16px Roboto;
     margin-left: 20%;
 }
@@ -120,18 +119,19 @@ label{
     flex-direction: row;
     align-items: center;
 }
+
 .profile{
     width: 40px;
     border-radius: 50%;
     margin-left: 12px;
 }
 .select-sal{
-    width: 42%;
+    width: 40%;
     align-items: start;
     height: 45px;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 3px;
     resize: vertical;
     font: normal normal normal 16px Roboto;
     letter-spacing: 0px;
@@ -141,16 +141,18 @@ label{
 }
 
 select {
-   margin-top: 10px;
+    margin-top: 12px;
     padding: 12px;
+    height: 45px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 3px;
     resize: vertical;
     font: normal normal normal 16px Roboto;
     letter-spacing: 0px;
     color: ■#42515f;
     background-color: transparent;
   }
+  
 .right-btn
 {
     width: 50%;
