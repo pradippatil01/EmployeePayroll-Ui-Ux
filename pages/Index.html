@@ -19,20 +19,19 @@
             </div>
         </div>
     </header>
-    <div class="form-content">
-            <form class="form" action="#" onsubmit="submit();return false">
+    <div id="formId" class="form-content">
+    
+            <form class="form" action="#" onreset="resetForm()" onsubmit="save();return false">
             <!-- code for heading -->
-            <div class="form-head">
-                Employee Payroll form
-            </div>
+            <div class="form-head"> Employee Payroll form </div>
             
             <!-- code for name label -->
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name" onchange="validate()" placeholder="Your name..." required>
+                <input class="input" type="text" id="name" name="name"  placeholder="Your name..." required>
             </div>
             <span>
-                <error-output class="text-error" for="name"></error-output>
+                <error-output class="text-error" for="text"></error-output>
             </span>
           
            
@@ -93,6 +92,13 @@
             </div>
             <!--code for salary-->
             <div class="row—content">
+                <label class="label text" for="salary">Select salary</label>
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+                <output class="salary—output" for="salary">400000</output>
+              
+            </div>
+             <!--
+            <div class="row—content">
                 <label class="label text" for="salary">Salary</label>
                 <select class="select-sal" type ="select" name="salary" id="salary" placeholder="Select Salary">
                     <option value="10000">10000</option>
@@ -100,7 +106,11 @@
                     <option value="30000">30000</option>
                     <option value="40000">40000</option>
                 </select>
-            </div>
+                   <span>
+                <error-output class="salary-output" for="salary"></error-output>
+            </span>
+            </div> -->
+         
             <!--cdoe for date-->
             <div class="row-content">
                 <label class="label text" for="startDate">StartDate</label>
@@ -167,15 +177,11 @@
                 <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px;"></textarea>
             </div>
             <!--code for button-->
-            <div class="row content">
-                <label class="label text" for="notes">Notes</label>
-                <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px;"></textarea>
-            </div>
-            <div class="buttonParent">
+              <div class="buttonParent">
                 <a href="../pages/Index.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
-                    <button type="reset" class="button resetButton">Reset</button>
+                    <button type="reset" class="button resetButton" id="resetButton">Reset</button>
                 </div>
             </div>
             <!--code for buttons-->
@@ -190,7 +196,7 @@
             </div> -->
         </form>
     </div>
-    <script type="text/javascript" src="../js/employee.js">
+    <script type="text/javascript" src="../js/employeepayroll.js">
     </script>
 </body>
 </html>

@@ -1,4 +1,11 @@
-
+/*
+// salary event
+const salary = document.querySelector('#salary');
+const output = document.querySelector('.salary-output');
+output.textContent = salary.value;
+salary.addEventListener('input', function () {
+    output.textContent = salary.value;
+});
 function submit() {
     let name = document.getElementById('name').value;
     alert(name);
@@ -13,16 +20,15 @@ function reset() {
 }
 
 function validate() {
-    let name = document.querySelector('#name');
+    const text = document.querySelector('#name');
     const textError = document.querySelector('.text-error');
     let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
-    if (nameRegex.test(name.value)) {
-        textError.textContent = "";
-    }
-    else if (name.value.length == 0) {
+    if (nameRegex.test(text.value)) {
         textError.textContent = "";
     }
     else {
         textError.textContent = "Name is incorrect";
     }
 }
+
+*/

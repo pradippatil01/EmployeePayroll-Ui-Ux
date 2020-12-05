@@ -89,20 +89,28 @@ label{
 }
 
 .text{
-    font-size: 16px;
+    font-size: 18px;
     color: #42515f;
     opacity: 1;
     font-family: Roboto;
 }
 
+/*
 .text-error{
    display: flex;
     font: normal normal normal 16px Roboto;
     margin-left: 20%;
+}*/
+
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }
 
 .input{
-    width: 80%;
+    width: 70%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius:  4px;
