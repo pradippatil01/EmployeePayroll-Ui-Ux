@@ -1,6 +1,5 @@
 class EmployeePayrollData {
 
-
     get id() {
         return this._id;
     }
@@ -90,20 +89,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
 const save = () => {
     try {
         let employeePayrollData = createEmployeePayroll();
+        createAndUpdateStorage(employeePayrollData);
     }
     catch (e) {
         return;
     }
 }
 
+
+function createAndUpdateStorage(employeePayrollData) {
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    if (employeePayrollList != undefined) {
+        employeePayrollList.push(employeePayrollData);
+    } else {
+        employeePayrollList = [employeePayrollData];
+    }
+    alert(employeePayrollList.toString());
+    localStorage.setItem("EmployeePayrolllist", JSON.stringify(employeePayrollList))
+}
+
 const createEmployeePayroll = () => {
-    let employeePayrollData = new EmployeePayrollData();
     try {
-        employeePayrollData.name = getInputValueById('#name');
+        let employeePayrollData = new EmployeePayrollData();
+        //  employeePayrollData.name = getInputValueById('#name');
     } catch (e) {
         setTextValue('.test.error'.e);
         throw e;
     }
+
     employeePayrollData.profilePic = getSelectedValues('[name=profile]').pop();
     employeePayrollData.gender = getSelectedValues('[name=gender]').pop();
     employeePayrollData.departnent = getSelectedValues('[name=department]');
