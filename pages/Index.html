@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="widhth=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/employeecss.css">
+    <script defer src="../js/new_employeepayroll.js"></script>
+    <script defer src="../js/EmployeePayroll.js"></script>
     <title>Employee payroll form</title>
 </head>
 <body>
@@ -20,8 +22,7 @@
         </div>
     </header>
     <div id="formId" class="form-content">
-    
-            <form class="form" action="#" onreset="resetForm()" onsubmit="save();return false">
+            <form class="form" action="#" onreset="resetForm()" onsubmit="save();">
             <!-- code for heading -->
             <div class="form-head"> Employee Payroll form </div>
             
@@ -29,11 +30,13 @@
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" name="name"  placeholder="Your name..." required>
+                <error-output class="text-error" for="text"></error-output>
             </div>
-            <span>
+        
+        <!--    <span>
                 <error-output class="text-error" for="text"></error-output>
             </span>
-          
+          -->
            
             <!-- code for profile pic radio -->
             <div class="row-content">
@@ -81,7 +84,7 @@
                     <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
                     <label class="text" for="hr">HR</label>
                     <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
-                    <label class="text" for="sales">Sales</label>
+                   <label class="text" for="sales">Sales</label>
                     <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
                     <label class="text" for="finance">Finance</label>
                     <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
@@ -92,11 +95,16 @@
             </div>
             <!--code for salary-->
             <div class="row—content">
-                <label class="label text" for="salary">Select salary</label>
+                <label class="label text" for="salary">choose your salary</label>
                 <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
-                <output class="salary—output" for="salary">400000</output>
-              
+                <output class="salary-output text" for="salary">400000</output>    
+            <!--
+                <label class="label text" for="salary">choose your salary</label>
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+                <output class="salary-output text" for="salary">400000</output>
+         -->
             </div>
+         
              <!--
             <div class="row—content">
                 <label class="label text" for="salary">Salary</label>
@@ -196,7 +204,5 @@
             </div> -->
         </form>
     </div>
-    <script type="text/javascript" src="../js/employeepayroll.js">
-    </script>
 </body>
 </html>
