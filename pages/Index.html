@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/employeecss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@300;400;500;600&display=swap" rel="stylesheet">
     <script defer src="../js/new_employeepayroll.js"></script>
     <script defer src="../js/EmployeePayroll.js"></script>
     <title>Employee payroll form</title>
 </head>
+
 <body>
     <!-- code for logo -->
     <header class="header-content header">
@@ -22,22 +24,22 @@
         </div>
     </header>
     <div id="formId" class="form-content">
-            <form class="form" action="#" onreset="resetForm()" onsubmit="save();">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save();">
             <!-- code for heading -->
             <div class="form-head"> Employee Payroll form </div>
-            
+
             <!-- code for name label -->
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
-                <input class="input" type="text" id="name" name="name"  placeholder="Your name..." required>
+                <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
                 <error-output class="text-error" for="text"></error-output>
             </div>
-        
-        <!--    <span>
+
+            <!--    <span>
                 <error-output class="text-error" for="text"></error-output>
             </span>
           -->
-           
+
             <!-- code for profile pic radio -->
             <div class="row-content">
                 <label class="label text" for="profile">Profile image</label>
@@ -84,7 +86,7 @@
                     <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
                     <label class="text" for="hr">HR</label>
                     <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
-                   <label class="text" for="sales">Sales</label>
+                    <label class="text" for="sales">Sales</label>
                     <input class="checkbox" type="checkbox" id="finance" name="finance" value="Finance">
                     <label class="text" for="finance">Finance</label>
                     <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
@@ -96,16 +98,17 @@
             <!--code for salary-->
             <div class="row—content">
                 <label class="label text" for="salary">choose your salary</label>
-                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
-                <output class="salary-output text" for="salary">400000</output>    
-            <!--
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100"
+                    value="400000">
+                <output class="salary-output text" for="salary">400000</output>
+                <!--
                 <label class="label text" for="salary">choose your salary</label>
                 <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
                 <output class="salary-output text" for="salary">400000</output>
          -->
             </div>
-         
-             <!--
+
+            <!--
             <div class="row—content">
                 <label class="label text" for="salary">Salary</label>
                 <select class="select-sal" type ="select" name="salary" id="salary" placeholder="Select Salary">
@@ -118,7 +121,7 @@
                 <error-output class="salary-output" for="salary"></error-output>
             </span>
             </div> -->
-         
+
             <!--cdoe for date-->
             <div class="row-content">
                 <label class="label text" for="startDate">StartDate</label>
@@ -185,7 +188,7 @@
                 <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px;"></textarea>
             </div>
             <!--code for button-->
-              <div class="buttonParent">
+            <div class="buttonParent">
                 <a href="../pages/Index.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
@@ -193,7 +196,7 @@
                 </div>
             </div>
             <!--code for buttons-->
-           <!-- <div class="row">
+            <!-- <div class="row">
                 <input type="submit" name="button" class="cancelButton" id="cancelButton" value="cancel"
                     onClick="cancel()">
                     <div class="right-btn">
@@ -205,4 +208,5 @@
         </form>
     </div>
 </body>
+
 </html>
