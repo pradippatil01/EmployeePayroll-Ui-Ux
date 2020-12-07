@@ -1,11 +1,25 @@
+let empPayrollList;
 window.addEventListener('DOMContentLoaded', (event) => {
+  empPayrollList=getEmployeePayrollDataFromStorage();
+  document.querySelector(".emp-count").textContent=empPayrollList.length;
   createInnerHtml();
+  localStorage.removeItem('editEmp');
 });
 
-createInnerHtml = () => {
+const getEmployeePayrollDataFromStorage=()=>
+{
+return localStorage.getItem('EmployeePayrollList')?
+JSON.parse(localStorage.getItem('EmployeePayrollList')):[];
+}
+
+const createInnerHtml = () => {
   const headerHtml = "<th></th><th>Name</th><th>Gender</th><th>Department</th><th>Salary</th><th>Start Date</th><th>Actions</th>";
-  const innerHtml = `${headerHtml}`;
-  let empPayrollData = createEmployeePayrollJSON();
+if(empPayrollList.length==0)
+{
+  return;
+}
+  let innerHtml = `${headerHtml}`;
+  empPayrollList = createEmployeePayrollJSON();
   for (const empPayrollData of empPayrollList) {
     innerHtml = `${innerHtml}
      <tr>
